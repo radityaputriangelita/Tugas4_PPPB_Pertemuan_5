@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="100dp"
+        android:textSize="24dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Regist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Username"
+        android:textColorHint="@color/dark_gray"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/white"
+        android:paddingLeft="10dp"
+        app:startIconDrawable="@drawable/baseline_person_2_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_input_edittext"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Email"
+        android:textColorHint="@color/dark_gray"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/white"
+        android:paddingLeft="10dp"
+        app:startIconDrawable="@drawable/baseline_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Phone"
+        android:textColorHint="@color/dark_gray"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/white"
+        android:paddingLeft="10dp"
+        app:startIconDrawable="@drawable/baseline_phone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_input_layout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_input_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Password"
+        android:textColorHint="@color/dark_gray"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="@color/white"
+        android:paddingLeft="10dp"
+        app:startIconDrawable="@drawable/baseline_lock_24"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_input_layout"
+        android:layout_alignStart="@+id/password_input_layout"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:buttonTint="#D1D1D1"/>
+    <TextView
+        android:id="@+id/text_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By checking the box you agree to our Terms and Conditions."
+        android:layout_toRightOf="@id/checkbox"
+        android:layout_alignBaseline="@id/checkbox"
+        android:textSize="8sp"
+        />
+    <Button
+        android:id="@+id/btn_regist"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="0dp"
+        android:layout_above="@id/quest_account"
+        android:backgroundTint="@color/light_blue"
+        android:text="Register"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/quest_account"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/already"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Have an Account?"
+            android:textSize="12sp"
+            android:layout_below="@id/btn_regist"
+
+            />
+        <TextView
+            android:id="@+id/log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/light_blue"
+            android:onClick="Regis_to_login"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>
